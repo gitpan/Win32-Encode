@@ -3,7 +3,11 @@
 Real::Enocde - Perl-Win32 Perl interaction with Progressive Networks
     ReadEncoder(tm).
 
-Version: 0.04Beta
+REVISION HISTORY
+
+v. 0.4 (9/14/98) - Original Release to CPAN
+
+v. 0.5 (9/30/98) - No real technical changes. Just some cleaning from 0.4
 
 
 DESCRIPTION

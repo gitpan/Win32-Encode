@@ -7,7 +7,7 @@ use vars qw(@ISA @EXPORT @EXPORT_OK %EXPORT_TAGS $VERSION);
 use Cwd 'chdir';
 use Carp;
 
-$VERSION = '0.04Beta';
+$VERSION = '0.05';
 
 @ISA = qw(Exporter);
 
@@ -230,7 +230,6 @@ $str = "$tittle $auth $copy $comm";
 
 chdir("$self->{rootDir}");
 $foo = `rmedit -i $in -o $out $str`;
-#print __LINE__;
 if ($foo eq "") {
 	print "Text_Edit complete\n";
 }else{
@@ -296,7 +295,6 @@ if (!defined($m)) {$m = "";}
 if (!defined($S) || $S !~ /(0|1)/) {croak "Need to identify a stream to edit";}
 
 $str = "$S $m $s";
-#print $str."\n";
 chdir("$self->{rootDir}");
 $foo = `rmedit -i $in -o $out $str`;
 
@@ -374,7 +372,6 @@ my $too = `rmcut $str`;
 if ($too ne "") { #error?
 	print $too . "\n";
 }
-#print "rmcut $str";
 chdir("$dir");
 exit;
 
@@ -392,7 +389,6 @@ my %hash = @_;
 foreach $a (sort keys %hash) {
 	$b = $a;
 	if (substr($a,0,1) ne '-') { $b=~s/^/-/;}
-#	print $b . " ". $hash{$a} ."\n"; # debug
 		if ($hash{$a} !~ /(^\s+|^$)/) {
 			push(@array,"$b $hash{$a}");
 		}
@@ -720,7 +716,7 @@ RVEncode.log is written to the current working directory. (i.e., the dir with th
 
 =head1 Version
 
-	Beta 090998
+	0.04Beta
 
 =head1 Knows Issues
 
@@ -729,6 +725,14 @@ RVEncode.log is written to the current working directory. (i.e., the dir with th
 =item 1
 	It is possible that some errors are not yet handled in the best way, if you find any
 	please let me know.
+
+
+=head1 REVISION HISTORY
+
+v. 0.4 (9/14/98) - Original Release to CPAN
+
+v. 0.5 (9/30/98) - No real technical changes. Just some cleaning from 0.4
+
 
 =head1 AUTHOR INFORMATION
 

@@ -9,7 +9,7 @@ goto endofperl
 #   by Kevin Meltzer <kmeltz@cris.com>
 
 $MODULE    = "Real::Encode";
-$VERSION   = "0.04Beta";
+$VERSION   = "0.05";
 $PM        = "Encode.pm";
 $FIRSTNAME = "Encode";
 $POD	   = "encode.html";
